@@ -8,9 +8,9 @@ Collection of scripts to decrypt parts of the firmware for Exynos9830
 ## How to run
 
 - Install requirements via ```pip3 install -r requirements.txt```
-- Place encrypted epbl.img and el3_mon.img into the same folder
+- Place encrypted epbl.img, el3_mon.img and tzsw.img into the same folder as the program
 - Place LDFW fragments into the ```LDFWs``` folder
-- Run decryptors via ```python3 decrypt-el3_mon.py```, ```python3 decrypt-epbl.py``` and ```python3 decrypt-ldfws.py```
+- Run decryptors via ```python3 decrypt-el3_mon.py```, ```python3 decrypt-epbl.py```, ```python3 decrypt-ldfws.py``` and ```python3 decrypt-tzsw.py```
 - Finished
 
 ## Example output
@@ -83,6 +83,13 @@ Saved to LDFWs/decrypted/srpmb_fw.ldfw.dec
 LDFW: tail_fw.ldfw
 Not encrypted
 Saved to LDFWs/decrypted/tail_fw.ldfw.dec
+
+~/decryptors
+❯ python decrypt-tzsw.py
+AES Key: b4f1a2b829af7ef069c978befb0b097a388901a317d7b4a200e5141e82413803
+IV: a5b67e3dd6fcc4659abaddd58a447578
+Decrypting...
+Decrypted version saved to tzsw.img.dec
 ```
 
 ## Notes
